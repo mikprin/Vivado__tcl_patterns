@@ -1,5 +1,8 @@
 
-create_project ps_test . -part xc7z020clg400-1
+set PROJECT_NAME "PS_test"
+
+
+create_project $PROJECT_NAME . -part xc7z020clg400-1
 create_bd_design "PS_system"
 
 # Create Zynq 
