@@ -1,0 +1,13 @@
+[Unit]
+Description=Constatnly check if SD card is there and mount it with `mv personal/* ..`
+
+[Service]
+Restart=always
+ExecStartPre=/root/scripts/check_sd.sh
+ExecStart=/usr/sbin/nginx
+WorkingDirectory=/root
+PrivateTmp=true
+User=root
+
+[Install]
+WantedBy=multi-user.target
