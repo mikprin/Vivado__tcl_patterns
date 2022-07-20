@@ -24,14 +24,14 @@ check_mount() {
         fusermount -u $sd_dir
         if $? -eq 0
         then
-            sleep 7
+            sleep 20
             return 0
         else
             return 1
         fi 
         
     else
-        echo "$DEV not exists."
+        # echo "$DEV not exists."
         return 1
     fi
 }
